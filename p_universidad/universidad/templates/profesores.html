@@ -1,0 +1,14 @@
+<!-- profesor.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Profesor</title>
+</head>
+<body>
+    <h1>Detalles del Profesor</h1>
+    <p><strong>Nombre:</strong> {{ profesor.nombre }}</p>
+    <p><strong>Área de Especialización:</strong> {{ profesor.area_especializacion }}</p>
+    <a href="{% url 'ver_profesores' %}">Volver a la lista de profesores</a>
+</body>
+</html>
