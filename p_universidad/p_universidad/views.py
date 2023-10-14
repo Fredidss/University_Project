@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Curso, Estudiante, Carrera, Profesor
+from .models import Curso, Estudiante, Profesor, Carrera
 
 def ver_cursos(request):
     cursos = Curso.objects.all()
@@ -13,6 +13,6 @@ def ver_carreras(request):
     carreras = Carrera.objects.all()
     return render(request, 'carreras.html', {'carreras': carreras})
 
-def ver_profesor(request):
+def ver_profesores(request):
     profesores = Profesor.objects.all()
     return render(request, 'profesores.html', {'profesores': profesores})
