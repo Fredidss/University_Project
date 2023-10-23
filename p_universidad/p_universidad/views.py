@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Curso, Estudiante, Profesor, Carrera
 
+def mi_vista(request):
+    return ("¡Bienvenido a la página de inicio de mi sitio web!")
+
 def ver_cursos(request):
     cursos = Curso.objects.all()
     return render(request, 'cursos.html', {'cursos': cursos})

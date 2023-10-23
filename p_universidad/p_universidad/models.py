@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 class Carrera(models.Model):
     nombre = models.CharField(max_length=100)
+    class Meta:
+        app_label = 'p_universidad'
 
 class Estudiante(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
